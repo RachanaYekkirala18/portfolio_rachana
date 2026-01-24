@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Rachana Yekkirala — Data Engineer / Analyst portfolio"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rachana Yekkirala — Data Engineer | Data Analyst | Business Analyst Portfolio" />
   <title>Rachana | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Ambient: gradient + orbs + grid + noise -->
-  <div class="ambient" aria-hidden="true">
+  <!-- Background system -->
+  <div class="bg" aria-hidden="true">
     <div class="aurora"></div>
     <div class="orb o1"></div>
     <div class="orb o2"></div>
     <div class="orb o3"></div>
-    <div class="grid"></div>
+    <div class="mesh"></div>
     <div class="noise"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
   </div>
 
   <!-- Top bar -->
   <header class="topbar" id="top">
-    <div class="wrap topbar-inner">
+    <div class="wrap top-inner">
       <a class="brand" href="#top" aria-label="Home">
-        <span class="dot"></span>
+        <span class="brand-mark"></span>
         <span class="brand-text">Rachana</span>
+        <span class="brand-sub">systems + analytics</span>
       </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="#about" class="navlink">About</a>
-        <a href="#projects" class="navlink">Projects</a>
+        <a href="#lab" class="navlink">Projects</a>
         <a href="#skills" class="navlink">Skills</a>
         <a href="#experience" class="navlink">Experience</a>
         <a href="#contact" class="navlink">Contact</a>
@@ -44,22 +46,26 @@
         <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
           <span id="themeIcon">☾</span>
         </button>
-        <a class="btn primary" id="resumeLink" href="#" target="_blank" rel="noreferrer">Resume</a>
+        <button class="iconbtn" id="cmdBtn" aria-label="Open command palette" title="Command palette (Ctrl/⌘ K)">
+          ⌘K
+        </button>
+        <a class="btn primary" id="resumeBtn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
-    <div class="mobile" id="mobile" aria-hidden="true">
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
       <div class="wrap mobile-inner">
-        <a href="#about" class="mobilelink">About</a>
-        <a href="#projects" class="mobilelink">Projects</a>
-        <a href="#skills" class="mobilelink">Skills</a>
-        <a href="#experience" class="mobilelink">Experience</a>
-        <a href="#contact" class="mobilelink">Contact</a>
+        <a href="#about" class="mlink">About</a>
+        <a href="#lab" class="mlink">Projects</a>
+        <a href="#skills" class="mlink">Skills</a>
+        <a href="#experience" class="mlink">Experience</a>
+        <a href="#contact" class="mlink">Contact</a>
         <div class="mobile-cta">
-          <a class="btn primary full" href="#" target="_blank" rel="noreferrer" id="resumeLink2">Resume</a>
+          <a class="btn primary full" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
     </div>
@@ -70,277 +76,239 @@
     <section class="wrap hero">
       <div class="hero-left">
         <div class="status">
-          <span class="pulse"></span>
+          <span class="dot"></span>
           <span id="statusText">Open to Data Engineer / Analyst roles</span>
         </div>
 
         <h1 class="h1">
-          I turn messy data into calm decisions.
-          <span class="h1-soft">Pipelines, dashboards, and metrics teams actually trust.</span>
+          I build <span class="grad">decision-grade</span> data products.
         </h1>
 
-        <p class="lead">
-          I’m <b>Venkata Rachana Yekkirala</b> — focused on <b>AWS, SQL, Python, BI</b>.
-          I build reliable ingestion + transformation flows and ship clear analytics experiences.
+        <p class="p">
+          Hi, I’m <b>Venkata Rachana Yekkirala</b>. I combine <b>SQL + AWS + Python</b> to ship
+          reliable pipelines, clean semantic metrics, and dashboards that teams trust.
+          <span class="soft">A little human. A little machine. Fully accountable.</span>
         </p>
 
-        <div class="hero-cta">
-          <a class="btn primary" href="#projects">Explore Projects</a>
+        <div class="cta">
+          <a class="btn primary" href="#lab">Explore Projects</a>
           <button class="btn ghost" id="copyEmailBtn">Copy Email</button>
         </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-k">Impact</div>
-            <div class="metric-v">10M+ records handled</div>
+        <div class="bento">
+          <div class="card b1">
+            <div class="kicker">Primary Stack</div>
+            <div class="big">AWS • SQL • Python</div>
+            <div class="tiny">Glue, Lambda, S3, Athena, Redshift • Power BI • Spark</div>
           </div>
-          <div class="metric">
-            <div class="metric-k">Speed</div>
-            <div class="metric-v">30–45% efficiency wins</div>
+          <div class="card b2">
+            <div class="kicker">Strength</div>
+            <div class="big">ETL + KPI Design</div>
+            <div class="tiny">From raw events → validated facts → decision metrics</div>
           </div>
-          <div class="metric">
-            <div class="metric-k">Stack</div>
-            <div class="metric-v">AWS • SQL • Python • BI</div>
+          <div class="card b3">
+            <div class="kicker">Signal</div>
+            <div class="big"><span id="liveMetric">10M+</span> rows</div>
+            <div class="tiny">Handled across analytics + engineering projects</div>
           </div>
-        </div>
-
-        <div class="links">
-          <a class="chiplink" id="emailLink" href="mailto:your.email@example.com">Email</a>
-          <a class="chiplink" id="linkedinLink" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="chiplink" id="githubLink" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="chiplink" id="mediumLink" href="#" target="_blank" rel="noreferrer">Medium</a>
+          <div class="card b4">
+            <div class="kicker">Humanoid Mode</div>
+            <div class="big">Calm execution</div>
+            <div class="tiny">Clear comms, crisp docs, measurable outcomes</div>
+          </div>
         </div>
       </div>
 
       <div class="hero-right">
-        <div class="humanoid-card">
-          <div class="humanoid-top">
-            <div class="eye"></div>
-            <div class="eye"></div>
-            <div class="glow"></div>
+        <div class="terminal card">
+          <div class="term-top">
+            <span class="pill red"></span><span class="pill yellow"></span><span class="pill green"></span>
+            <span class="term-title">assistant://rachana</span>
           </div>
-          <div class="humanoid-body">
-            <div class="scanline"></div>
-            <div class="humanoid-title">Signal Console</div>
-            <div class="humanoid-sub">Your data, translated into actions.</div>
-
-            <div class="console">
-              <div class="row">
-                <span class="tag">ETL</span>
-                <span class="txt">Built ingestion + validation</span>
-              </div>
-              <div class="row">
-                <span class="tag">SQL</span>
-                <span class="txt">Optimized queries & KPIs</span>
-              </div>
-              <div class="row">
-                <span class="tag">BI</span>
-                <span class="txt">Dashboards for weekly reviews</span>
-              </div>
-              <div class="row">
-                <span class="tag">Cloud</span>
-                <span class="txt">AWS-first, multi-cloud ready</span>
-              </div>
-            </div>
-
-            <div class="humanoid-foot">
-              <div class="mini-pill">Reliable</div>
-              <div class="mini-pill">Fast</div>
-              <div class="mini-pill">Clean</div>
-            </div>
+          <div class="term-body" id="terminal">
+            <div class="line"><span class="prompt">></span> boot sequence…</div>
+            <div class="line"><span class="prompt">></span> loading portfolio modules</div>
+            <div class="line"><span class="prompt">></span> <span class="ok">ready</span> — say hello, human</div>
           </div>
+          <div class="term-foot">
+            <button class="chip" data-term="pipelines">pipelines</button>
+            <button class="chip" data-term="dashboards">dashboards</button>
+            <button class="chip" data-term="metrics">metrics</button>
+            <button class="chip" data-term="governance">governance</button>
+          </div>
+        </div>
+
+        <div class="socials card">
+          <a class="slink" id="lnkLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="slink" id="lnkGitHub" href="#" target="_blank" rel="noopener">GitHub</a>
+          <a class="slink" id="lnkTableau" href="#" target="_blank" rel="noopener">Tableau</a>
+          <a class="slink" id="lnkPowerBI" href="#" target="_blank" rel="noopener">Power BI</a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT (variety layout: split + floating cards) -->
+    <!-- ABOUT -->
     <section class="wrap section" id="about">
       <div class="section-head">
-        <h2>About</h2>
-        <p class="muted">Short, human, and focused on outcomes.</p>
+        <h2 class="h2">About</h2>
+        <p class="muted">Short, sharp, and real — no fluff.</p>
       </div>
 
       <div class="about-grid">
-        <div class="glass about-main">
-          <h3 class="h3">What I’m known for</h3>
-          <p>
-            I combine <b>engineering discipline</b> with <b>business clarity</b>.
-            My sweet spot is building pipelines that keep data fresh, clean, and explainable —
-            and turning it into dashboards and decision metrics people actually use.
+        <div class="card about-main">
+          <div class="kicker">What I do</div>
+          <p class="p">
+            I design data workflows that are <b>fast</b>, <b>auditable</b>, and <b>usable</b>:
+            ingestion → transformation → quality checks → curated datasets → dashboards.
           </p>
-
-          <div class="about-highlights">
-            <div class="hl">
-              <div class="hl-title">Data Products</div>
-              <div class="hl-text">KPI design • metric definitions • governance basics</div>
-            </div>
-            <div class="hl">
-              <div class="hl-title">Engineering</div>
-              <div class="hl-text">Batch/stream ingestion • ETL/ELT • testing & validation</div>
-            </div>
-            <div class="hl">
-              <div class="hl-title">Analytics</div>
-              <div class="hl-text">Ad-hoc SQL • variance analysis • stakeholder storytelling</div>
-            </div>
-          </div>
+          <div class="divider"></div>
+          <div class="kicker">How I work</div>
+          <ul class="list">
+            <li>Define KPIs with stakeholders, then lock definitions in a clean metric layer.</li>
+            <li>Validate data like it’s production money (because it is).</li>
+            <li>Ship increments weekly: small changes, measurable wins.</li>
+          </ul>
         </div>
 
-        <div class="about-side">
-          <div class="glass floatcard">
-            <div class="float-title">Current focus</div>
-            <div class="float-text">Data Engineering + BI for business teams</div>
+        <div class="card about-side">
+          <div class="kicker">Quick profile</div>
+          <div class="facts">
+            <div class="fact"><span>Location</span><b>USA</b></div>
+            <div class="fact"><span>Degree</span><b>MS Data Science</b></div>
+            <div class="fact"><span>Focus</span><b>Data Eng + BI</b></div>
+            <div class="fact"><span>Tools</span><b>AWS • SQL • Python</b></div>
           </div>
-          <div class="glass floatcard">
-            <div class="float-title">Tools I reach for</div>
-            <div class="float-text">AWS, SQL, Python, Power BI, Spark</div>
-          </div>
-          <div class="glass floatcard">
-            <div class="float-title">I care about</div>
-            <div class="float-text">Quality checks, clarity, and measurable impact</div>
-          </div>
+          <div class="divider"></div>
+          <div class="kicker">Recruiter-friendly</div>
+          <p class="muted">
+            I can jump into SQL analysis, build ETL, and own dashboards end-to-end.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS (variety: filters + masonry-ish cards + modal) -->
-    <section class="wrap section" id="projects">
+    <!-- PROJECT LAB -->
+    <section class="wrap section" id="lab">
       <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">A few builds that show real capability.</p>
+        <h2 class="h2">Project Lab</h2>
+        <p class="muted">Filter by intent. Click a card to open the full brief.</p>
       </div>
 
-      <div class="project-controls glass">
-        <div class="filters" id="filters"></div>
-        <div class="searchbox">
-          <input id="projectSearch" type="text" placeholder="Search projects (e.g., lakehouse, kafka, power bi)" autocomplete="off"/>
+      <div class="lab-controls">
+        <div class="chips" id="filterChips"></div>
+
+        <div class="search">
+          <input id="searchInput" type="text" placeholder="Search projects (e.g., kafka, glue, power bi)..." />
+          <button class="iconbtn" id="clearSearch" aria-label="Clear search">✕</button>
         </div>
       </div>
 
       <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
-    <!-- SKILLS (variety: chips + meters + categories) -->
+    <!-- SKILLS MATRIX -->
     <section class="wrap section" id="skills">
       <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">Grouped for readability, not buzzwords.</p>
+        <h2 class="h2">Skills Matrix</h2>
+        <p class="muted">Not a boring list — a map of what I actually use.</p>
       </div>
 
-      <div class="skills-grid">
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Core</h3>
-            <p class="muted small">The stack I use most.</p>
-          </div>
-          <div class="chips" id="coreChips"></div>
-        </div>
-
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Strength meters</h3>
-            <p class="muted small">A quick signal of depth.</p>
-          </div>
-          <div class="meters" id="meters"></div>
-        </div>
-
-        <div class="glass skillbox">
-          <div class="skillbox-head">
-            <h3 class="h3">Tools</h3>
-            <p class="muted small">Cloud + pipelines + BI.</p>
-          </div>
-          <div class="chips" id="toolChips"></div>
-        </div>
-      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
     </section>
 
-    <!-- EXPERIENCE (variety: timeline) -->
+    <!-- EXPERIENCE -->
     <section class="wrap section" id="experience">
       <div class="section-head">
-        <h2>Experience</h2>
-        <p class="muted">Clean timeline with outcomes.</p>
+        <h2 class="h2">Experience</h2>
+        <p class="muted">Timeline view. Measurable work. Clean storytelling.</p>
       </div>
 
-      <div class="timeline glass" id="timeline"></div>
+      <div class="timeline" id="timeline"></div>
     </section>
 
     <!-- CONTACT -->
     <section class="wrap section" id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">If you’re hiring, I respond fast.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="glass contact-card">
-          <h3 class="h3">Let’s talk</h3>
-          <p class="muted">Email is best. I can also share a tailored resume for the role.</p>
-
+      <div class="contact card">
+        <div class="contact-left">
+          <h2 class="h2">Let’s build something reliable.</h2>
+          <p class="muted">
+            If you’re hiring for Data Engineer / Data Analyst / Business Analyst roles,
+            I’m happy to share a tailored walkthrough of my projects.
+          </p>
           <div class="contact-actions">
-            <a class="btn primary" id="emailBtn" href="mailto:your.email@example.com">Email me</a>
-            <button class="btn ghost" id="copyEmailBtn2">Copy Email</button>
+            <a class="btn primary" id="mailBtn" href="#">Email me</a>
+            <button class="btn ghost" id="copyPhoneBtn">Copy Phone</button>
           </div>
-
-          <div class="contact-mini">
-            <a class="chiplink" id="linkedinLink2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="chiplink" id="githubLink2" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+          <div class="tiny" id="toast" aria-live="polite"></div>
         </div>
 
-        <div class="glass contact-card">
-          <h3 class="h3">Quick note</h3>
-          <form id="noteForm">
-            <label class="label">Your name</label>
-            <input class="input" id="nameInput" placeholder="Name" required />
+        <div class="contact-right">
+          <div class="kicker">Quick links</div>
+          <div class="linkstack">
+            <a class="slink" id="cLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="slink" id="cGitHub" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a class="slink" id="cMedium" href="#" target="_blank" rel="noopener">Medium</a>
+          </div>
 
-            <label class="label">Message</label>
-            <textarea class="input area" id="msgInput" placeholder="What are you hiring for?" required></textarea>
-
-            <button class="btn primary full" type="submit">Generate email draft</button>
-            <p class="muted small" id="draftHint"></p>
-          </form>
+          <div class="divider"></div>
+          <div class="kicker">Humanoid promise</div>
+          <p class="muted">
+            I keep things simple: clear scope, clean metrics, shipping mindset.
+          </p>
         </div>
       </div>
-    </section>
 
-    <footer class="wrap footer">
-      <div class="muted small">© <span id="year"></span> Rachana — built for GitHub Pages.</div>
-      <a class="muted small backtop" href="#top">Back to top ↑</a>
-    </footer>
+      <footer class="footer">
+        <span>© <span id="year"></span> Rachana.</span>
+        <span class="muted">Built with HTML/CSS/JS • Hosted on GitHub Pages</span>
+      </footer>
+    </section>
   </main>
 
-  <!-- Project Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+  <!-- Project modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card glass" role="document">
-      <div class="modal-head">
+    <div class="modal-card" role="document">
+      <div class="modal-top">
         <div>
-          <div class="modal-title" id="modalTitle">Project</div>
-          <div class="modal-sub" id="modalSub">Stack • Outcome</div>
+          <div class="kicker" id="modalKicker">Project</div>
+          <h3 class="h3" id="modalTitle">Title</h3>
         </div>
-        <button class="iconbtn" id="closeModal" aria-label="Close">✕</button>
+        <button class="iconbtn" id="modalClose" aria-label="Close">✕</button>
       </div>
 
-      <div class="modal-body">
-        <div class="modal-block">
-          <div class="label muted small">What it does</div>
-          <p id="modalDesc"></p>
-        </div>
+      <div class="modal-tags" id="modalTags"></div>
+      <p class="muted" id="modalDesc"></p>
 
-        <div class="modal-block">
-          <div class="label muted small">Highlights</div>
-          <ul class="bullets" id="modalBullets"></ul>
+      <div class="modal-cols">
+        <div class="modal-col">
+          <div class="kicker">Highlights</div>
+          <ul class="list" id="modalHighlights"></ul>
         </div>
-
-        <div class="modal-block">
-          <div class="label muted small">Tech</div>
-          <div class="chips" id="modalTech"></div>
-        </div>
-
-        <div class="modal-actions">
-          <a class="btn primary" id="modalLink" href="#" target="_blank" rel="noreferrer">View Repo</a>
-          <button class="btn ghost" id="copyProjectBtn">Copy project summary</button>
+        <div class="modal-col">
+          <div class="kicker">Stack</div>
+          <div class="pillbox" id="modalStack"></div>
         </div>
       </div>
+
+      <div class="modal-actions">
+        <a class="btn primary" id="modalLink" href="#" target="_blank" rel="noopener">Open Repo</a>
+        <button class="btn ghost" id="copyProjectBtn">Copy project summary</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command palette -->
+  <div class="cmd" id="cmd" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-backdrop" id="cmdBackdrop"></div>
+    <div class="cmd-card">
+      <div class="cmd-top">
+        <div class="kicker">Command palette</div>
+        <button class="iconbtn" id="cmdClose" aria-label="Close">✕</button>
+      </div>
+      <input id="cmdInput" class="cmd-input" placeholder="Type: projects, skills, contact, theme…" />
+      <div class="cmd-list" id="cmdList"></div>
+      <div class="cmd-foot muted">Tip: Ctrl/⌘ K • Enter to run • Esc to close</div>
     </div>
   </div>
 
