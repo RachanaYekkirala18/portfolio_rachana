@@ -1,188 +1,348 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Rachana Yekkirala — Data Engineer / Analyst portfolio"/>
   <title>Rachana | Portfolio</title>
-  <meta name="description" content="Rachana — Business Analyst / Data Analyst / Data Engineer portfolio." />
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-  <!-- NAV -->
-  <header class="navWrap">
-    <div class="nav">
-      <a class="brand" href="#top">Rachana</a>
+  <!-- Ambient: gradient + orbs + grid + noise -->
+  <div class="ambient" aria-hidden="true">
+    <div class="aurora"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="grid"></div>
+    <div class="noise"></div>
+  </div>
 
-      <button class="navBtn" id="navBtn" aria-label="Open menu">☰</button>
+  <!-- Top bar -->
+  <header class="topbar" id="top">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="dot"></span>
+        <span class="brand-text">Rachana</span>
+      </a>
 
-      <nav class="navLinks" id="navLinks" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact" class="pill">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" class="navlink">About</a>
+        <a href="#projects" class="navlink">Projects</a>
+        <a href="#skills" class="navlink">Skills</a>
+        <a href="#experience" class="navlink">Experience</a>
+        <a href="#contact" class="navlink">Contact</a>
       </nav>
+
+      <div class="actions">
+        <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+          <span id="themeIcon">☾</span>
+        </button>
+        <a class="btn primary" id="resumeLink" href="#" target="_blank" rel="noreferrer">Resume</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
-    <div class="navMobile" id="navMobile" aria-label="Mobile menu">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact" class="pill">Contact</a>
+    <div class="mobile" id="mobile" aria-hidden="true">
+      <div class="wrap mobile-inner">
+        <a href="#about" class="mobilelink">About</a>
+        <a href="#projects" class="mobilelink">Projects</a>
+        <a href="#skills" class="mobilelink">Skills</a>
+        <a href="#experience" class="mobilelink">Experience</a>
+        <a href="#contact" class="mobilelink">Contact</a>
+        <div class="mobile-cta">
+          <a class="btn primary full" href="#" target="_blank" rel="noreferrer" id="resumeLink2">Resume</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main id="top" class="container">
+  <main>
     <!-- HERO -->
-    <section class="hero">
-      <div class="heroLeft">
-        <p class="kicker">Hey there,</p>
-        <h1 class="heroTitle">
-          I am <span class="accent">RACHANA</span>.<br />
-          I turn insights into decisions.
+    <section class="wrap hero">
+      <div class="hero-left">
+        <div class="status">
+          <span class="pulse"></span>
+          <span id="statusText">Open to Data Engineer / Analyst roles</span>
+        </div>
+
+        <h1 class="h1">
+          I turn messy data into calm decisions.
+          <span class="h1-soft">Pipelines, dashboards, and metrics teams actually trust.</span>
         </h1>
 
-        <div class="heroBtns">
-          <!-- Replace with your actual links -->
-          <a class="btn primary" href="#contact">Contact me</a>
-          <a class="btn" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Get Resume</a>
-        </div>
-
-        <p class="heroSub">
-          Business Analyst / Data Analyst / Data Engineer — SQL • Power BI • Python • AWS
+        <p class="lead">
+          I’m <b>Venkata Rachana Yekkirala</b> — focused on <b>AWS, SQL, Python, BI</b>.
+          I build reliable ingestion + transformation flows and ship clear analytics experiences.
         </p>
+
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">Explore Projects</a>
+          <button class="btn ghost" id="copyEmailBtn">Copy Email</button>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-k">Impact</div>
+            <div class="metric-v">10M+ records handled</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Speed</div>
+            <div class="metric-v">30–45% efficiency wins</div>
+          </div>
+          <div class="metric">
+            <div class="metric-k">Stack</div>
+            <div class="metric-v">AWS • SQL • Python • BI</div>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="chiplink" id="emailLink" href="mailto:your.email@example.com">Email</a>
+          <a class="chiplink" id="linkedinLink" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="chiplink" id="githubLink" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="chiplink" id="mediumLink" href="#" target="_blank" rel="noreferrer">Medium</a>
+        </div>
       </div>
 
-      <div class="heroRight">
-        <div class="codeCard">
-          <div class="codeTop">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <span class="codeTitle">portfolio.js</span>
+      <div class="hero-right">
+        <div class="humanoid-card">
+          <div class="humanoid-top">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="glow"></div>
           </div>
+          <div class="humanoid-body">
+            <div class="scanline"></div>
+            <div class="humanoid-title">Signal Console</div>
+            <div class="humanoid-sub">Your data, translated into actions.</div>
 
-          <pre class="codeBlock"><code id="codeText"></code></pre>
+            <div class="console">
+              <div class="row">
+                <span class="tag">ETL</span>
+                <span class="txt">Built ingestion + validation</span>
+              </div>
+              <div class="row">
+                <span class="tag">SQL</span>
+                <span class="txt">Optimized queries & KPIs</span>
+              </div>
+              <div class="row">
+                <span class="tag">BI</span>
+                <span class="txt">Dashboards for weekly reviews</span>
+              </div>
+              <div class="row">
+                <span class="tag">Cloud</span>
+                <span class="txt">AWS-first, multi-cloud ready</span>
+              </div>
+            </div>
+
+            <div class="humanoid-foot">
+              <div class="mini-pill">Reliable</div>
+              <div class="mini-pill">Fast</div>
+              <div class="mini-pill">Clean</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2 class="sectionTitle">ABOUT ME</h2>
+    <!-- ABOUT (variety layout: split + floating cards) -->
+    <section class="wrap section" id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p class="muted">Short, human, and focused on outcomes.</p>
+      </div>
 
-      <div class="split">
-        <div class="card">
-          <h3 class="cardTitle">Who am I?</h3>
-          <p class="muted">
-            I’m Rachana — a Master’s in Data Science graduate (UMBC, May 2024). I work with stakeholders to define
-            KPIs, build decision-ready dashboards, and deliver analysis that leaders can act on.
+      <div class="about-grid">
+        <div class="glass about-main">
+          <h3 class="h3">What I’m known for</h3>
+          <p>
+            I combine <b>engineering discipline</b> with <b>business clarity</b>.
+            My sweet spot is building pipelines that keep data fresh, clean, and explainable —
+            and turning it into dashboards and decision metrics people actually use.
           </p>
-          <p class="muted">
-            My sweet spot is combining <b>clean metrics</b> + <b>clear storytelling</b> with strong hands-on skills in
-            SQL, Power BI, Python, and AWS.
-          </p>
+
+          <div class="about-highlights">
+            <div class="hl">
+              <div class="hl-title">Data Products</div>
+              <div class="hl-text">KPI design • metric definitions • governance basics</div>
+            </div>
+            <div class="hl">
+              <div class="hl-title">Engineering</div>
+              <div class="hl-text">Batch/stream ingestion • ETL/ELT • testing & validation</div>
+            </div>
+            <div class="hl">
+              <div class="hl-title">Analytics</div>
+              <div class="hl-text">Ad-hoc SQL • variance analysis • stakeholder storytelling</div>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <h3 class="cardTitle">Quick facts</h3>
-          <div class="facts">
-            <div class="fact"><span class="factNum">10M+</span><span class="factLbl">records handled</span></div>
-            <div class="fact"><span class="factNum">8–12</span><span class="factLbl">dashboards built</span></div>
-            <div class="fact"><span class="factNum">30–45%</span><span class="factLbl">effort reduced</span></div>
-            <div class="fact"><span class="factNum">AWS</span><span class="factLbl">S3 • Glue • Lambda</span></div>
+        <div class="about-side">
+          <div class="glass floatcard">
+            <div class="float-title">Current focus</div>
+            <div class="float-text">Data Engineering + BI for business teams</div>
           </div>
-
-          <div class="miniLinks">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="mailto:yourname@email.com">Email</a>
+          <div class="glass floatcard">
+            <div class="float-title">Tools I reach for</div>
+            <div class="float-text">AWS, SQL, Python, Power BI, Spark</div>
+          </div>
+          <div class="glass floatcard">
+            <div class="float-title">I care about</div>
+            <div class="float-text">Quality checks, clarity, and measurable impact</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <h2 class="sectionTitle">EXPERIENCE</h2>
-
-      <div class="stack" id="expWrap">
-        <!-- JS renders these -->
+    <!-- PROJECTS (variety: filters + masonry-ish cards + modal) -->
+    <section class="wrap section" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">A few builds that show real capability.</p>
       </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="sectionRow">
-        <h2 class="sectionTitle">PROJECTS</h2>
+      <div class="project-controls glass">
         <div class="filters" id="filters"></div>
+        <div class="searchbox">
+          <input id="projectSearch" type="text" placeholder="Search projects (e.g., lakehouse, kafka, power bi)" autocomplete="off"/>
+        </div>
       </div>
 
-      <div class="grid" id="projectGrid"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section">
-      <h2 class="sectionTitle">TESTIMONIALS</h2>
-
-      <div class="grid2" id="testWrap">
-        <!-- JS renders these -->
+    <!-- SKILLS (variety: chips + meters + categories) -->
+    <section class="wrap section" id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="muted">Grouped for readability, not buzzwords.</p>
       </div>
+
+      <div class="skills-grid">
+        <div class="glass skillbox">
+          <div class="skillbox-head">
+            <h3 class="h3">Core</h3>
+            <p class="muted small">The stack I use most.</p>
+          </div>
+          <div class="chips" id="coreChips"></div>
+        </div>
+
+        <div class="glass skillbox">
+          <div class="skillbox-head">
+            <h3 class="h3">Strength meters</h3>
+            <p class="muted small">A quick signal of depth.</p>
+          </div>
+          <div class="meters" id="meters"></div>
+        </div>
+
+        <div class="glass skillbox">
+          <div class="skillbox-head">
+            <h3 class="h3">Tools</h3>
+            <p class="muted small">Cloud + pipelines + BI.</p>
+          </div>
+          <div class="chips" id="toolChips"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (variety: timeline) -->
+    <section class="wrap section" id="experience">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p class="muted">Clean timeline with outcomes.</p>
+      </div>
+
+      <div class="timeline glass" id="timeline"></div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2 class="sectionTitle">CONTACT</h2>
+    <section class="wrap section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">If you’re hiring, I respond fast.</p>
+      </div>
 
-      <div class="contactWrap">
-        <div class="card">
-          <h3 class="cardTitle">Contact me</h3>
-          <p class="muted">If you have any questions, feel free to reach out.</p>
+      <div class="contact-grid">
+        <div class="glass contact-card">
+          <h3 class="h3">Let’s talk</h3>
+          <p class="muted">Email is best. I can also share a tailored resume for the role.</p>
 
-          <form class="form" id="contactForm">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
+          <div class="contact-actions">
+            <a class="btn primary" id="emailBtn" href="mailto:your.email@example.com">Email me</a>
+            <button class="btn ghost" id="copyEmailBtn2">Copy Email</button>
+          </div>
 
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" placeholder="your@email.com" required />
-            </label>
-
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="4" placeholder="Write your message..." required></textarea>
-            </label>
-
-            <button class="btn primary" type="submit">Send Message</button>
-            <p class="tiny muted" id="formNote"></p>
-          </form>
+          <div class="contact-mini">
+            <a class="chiplink" id="linkedinLink2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="chiplink" id="githubLink2" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
         </div>
 
-        <div class="card">
-          <h3 class="cardTitle">Details</h3>
-          <div class="detail">
-            <div class="muted">Email</div>
-            <div class="big">yourname@email.com</div>
-          </div>
-          <div class="detail">
-            <div class="muted">Location</div>
-            <div class="big">USA (Open to relocation)</div>
-          </div>
+        <div class="glass contact-card">
+          <h3 class="h3">Quick note</h3>
+          <form id="noteForm">
+            <label class="label">Your name</label>
+            <input class="input" id="nameInput" placeholder="Name" required />
 
-          <div class="miniLinks">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
+            <label class="label">Message</label>
+            <textarea class="input area" id="msgInput" placeholder="What are you hiring for?" required></textarea>
+
+            <button class="btn primary full" type="submit">Generate email draft</button>
+            <p class="muted small" id="draftHint"></p>
+          </form>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="muted">© <span id="year"></span> Rachana</div>
+    <footer class="wrap footer">
+      <div class="muted small">© <span id="year"></span> Rachana — built for GitHub Pages.</div>
+      <a class="muted small backtop" href="#top">Back to top ↑</a>
     </footer>
   </main>
+
+  <!-- Project Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card glass" role="document">
+      <div class="modal-head">
+        <div>
+          <div class="modal-title" id="modalTitle">Project</div>
+          <div class="modal-sub" id="modalSub">Stack • Outcome</div>
+        </div>
+        <button class="iconbtn" id="closeModal" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-block">
+          <div class="label muted small">What it does</div>
+          <p id="modalDesc"></p>
+        </div>
+
+        <div class="modal-block">
+          <div class="label muted small">Highlights</div>
+          <ul class="bullets" id="modalBullets"></ul>
+        </div>
+
+        <div class="modal-block">
+          <div class="label muted small">Tech</div>
+          <div class="chips" id="modalTech"></div>
+        </div>
+
+        <div class="modal-actions">
+          <a class="btn primary" id="modalLink" href="#" target="_blank" rel="noreferrer">View Repo</a>
+          <button class="btn ghost" id="copyProjectBtn">Copy project summary</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
