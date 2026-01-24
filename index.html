@@ -1,71 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rachana | Data Systems</title>
-  <meta name="description" content="Rachana — calm data systems. Pipelines, metrics, and dashboards people trust." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Venkata Rachana Yekkirala | Portfolio</title>
+  <meta name="description" content="Calm data systems. Pipelines, metrics, and dashboards people actually trust." />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
-      <a class="brand" href="#top">Rachana data systems</a>
+  <!-- NAV -->
+  <header class="navWrap">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span>Rachana data systems</span>
+      </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu">Menu</button>
+      <button class="navBtn" id="navBtn" aria-label="Open menu">☰</button>
 
-      <div class="links" id="links">
+      <nav class="navLinks" id="navLinks" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#contact" class="pillLink">Contact</a>
-      </div>
-    </nav>
+        <a href="#contact" class="pill">Contact</a>
+        <a class="pill subtle" id="resumeLink" href="#" target="_blank" rel="noreferrer">Resume</a>
+      </nav>
+    </div>
 
-    <div class="mobile" id="mobile">
+    <div class="navMobile" id="navMobile" aria-label="Mobile menu">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#contact" class="pillLink">Contact</a>
+      <a href="#contact" class="pill">Contact</a>
+      <a class="pill subtle" id="resumeLinkMobile" href="#" target="_blank" rel="noreferrer">Resume</a>
     </div>
   </header>
 
   <main id="top" class="container">
+
     <!-- HERO -->
     <section class="hero">
-      <p class="pill">Open to Data Engineer / Analyst roles</p>
+      <div class="heroLeft">
+        <p class="pill smallPill">Open to Data Engineer / Analyst roles</p>
 
-      <h1 class="h1">
-        Calm data systems.<br />
-        Pipelines, metrics, and dashboards<br />
-        people actually trust.
-      </h1>
+        <h1 class="heroTitle">
+          Calm data systems.<br />
+          Pipelines, metrics, and dashboards<br />
+          people actually trust.
+        </h1>
 
-      <p class="sub">
-        I’m <b>Venkata Rachana Yekkirala</b>. I build AWS + SQL + Python workflows that make raw data
-        reliable, measurable, and decision-ready.
-      </p>
+        <p class="heroSub">
+          I’m <b>Venkata Rachana Yekkirala</b>. I build <b>AWS + SQL + Python</b> workflows that make raw data reliable,
+          measurable, and decision-ready.
+        </p>
 
-      <div class="cta">
-        <a class="btn primary" href="#projects">Explore projects</a>
-        <a class="btn" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <div class="heroBtns">
+          <a class="btn primary" href="#projects">Explore Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+
+        <div class="signals">
+          <div class="sig">
+            <div class="sigK">CORE</div>
+            <div class="sigV">AWS • SQL • Python • Power BI • Tableau</div>
+          </div>
+          <div class="sig">
+            <div class="sigK">FOCUS</div>
+            <div class="sigV">ETL • KPI Design • Reporting • Analytics</div>
+          </div>
+          <div class="sig">
+            <div class="sigK">SIGNAL</div>
+            <div class="sigV">10M+ rows • 8–12 dashboards • 30–40% automation gains</div>
+          </div>
+        </div>
       </div>
 
-      <div class="meta">
-        <div>
-          <span>CORE</span>
-          <p>AWS · SQL · Python · BI</p>
+      <div class="heroRight">
+        <!-- Neha-like console -->
+        <div class="console">
+          <div class="consoleTop">
+            <span class="cDot r"></span><span class="cDot y"></span><span class="cDot g"></span>
+            <span class="consoleTitle">Signal Console</span>
+          </div>
+
+          <div class="consoleBody">
+            <div class="line muted">> booting...</div>
+            <div class="line muted">> loading modules</div>
+            <div class="line ok">> ready — choose a mode</div>
+
+            <div class="chipsRow" id="modeChips"></div>
+
+            <div class="sectionMini">
+              <div class="miniK">FOCUS</div>
+              <div class="miniV">ETL + KPI Design</div>
+              <div class="miniS muted">decision-grade metrics</div>
+            </div>
+
+            <div class="sectionMini">
+              <div class="miniK">STRENGTH</div>
+              <div class="miniV">SQL storytelling</div>
+              <div class="miniS muted">fast, clean analysis</div>
+            </div>
+
+            <div class="sectionMini">
+              <div class="miniK">STYLE</div>
+              <div class="miniV">Quality-first</div>
+              <div class="miniS muted">validation • clean definitions • repeatable runs</div>
+            </div>
+          </div>
         </div>
-        <div>
-          <span>FOCUS</span>
-          <p>ETL · KPI Design · Analytics</p>
-        </div>
-        <div>
-          <span>SIGNAL</span>
-          <p>10M+ rows through projects</p>
+
+        <div class="miniLinks">
+          <a id="githubTop" href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <a id="linkedinTop" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a id="tableauTop" href="#" target="_blank" rel="noreferrer">Tableau</a>
         </div>
       </div>
     </section>
@@ -74,30 +125,27 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="sectionHead">
-        <h2>About</h2>
-        <p class="muted">
-          Master’s in Data Science (UMBC, May 2024). I combine analytics and engineering:
-          I define KPIs, build reporting datasets, and ship dashboards that stakeholders actually use.
-        </p>
-      </div>
+      <h2 class="sectionTitle">ABOUT</h2>
 
-      <div class="twoCol">
-        <div>
-          <h3>What I do</h3>
+      <div class="split">
+        <div class="card">
+          <h3 class="cardTitle">Who I am</h3>
           <p class="muted">
-            I take ambiguous business questions and turn them into clean metrics, reproducible analysis,
-            and dashboards. When the workflow is repetitive, I automate it with Python.
+            Master’s in Data Science (UMBC, May 2024). I’ve worked across analytics and data engineering to
+            define KPIs, build reporting datasets, and deliver dashboards used in business reviews.
+          </p>
+          <p class="muted">
+            I like clean definitions, reliable pipelines, and metrics that actually drive decisions.
           </p>
         </div>
 
-        <div>
-          <h3>What I optimize for</h3>
-          <ul class="list">
-            <li>Clear KPI definitions and data trust</li>
-            <li>Fast SQL and low-friction reporting</li>
-            <li>Simple, maintainable pipelines</li>
-            <li>Decision-ready dashboards</li>
+        <div class="card">
+          <h3 class="cardTitle">What I’m great at</h3>
+          <ul class="bullets muted">
+            <li>SQL for large tables (CTEs, windows, performance tuning)</li>
+            <li>KPI design + reporting automation (Python)</li>
+            <li>Power BI dashboards (DAX, modeling) and Tableau storytelling</li>
+            <li>AWS analytics stack (S3, Glue, Lambda, Athena, Redshift)</li>
           </ul>
         </div>
       </div>
@@ -107,34 +155,21 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <div class="sectionHeadRow">
-        <div>
-          <h2>Projects</h2>
-          <p class="muted">A few builds that show how I work.</p>
-        </div>
-
-        <div class="filterWrap">
-          <button class="filter active" data-tag="All">All</button>
-          <button class="filter" data-tag="AWS">AWS</button>
-          <button class="filter" data-tag="Kafka">Kafka</button>
-          <button class="filter" data-tag="Power BI">Power BI</button>
-        </div>
+      <div class="sectionRow">
+        <h2 class="sectionTitle">PROJECTS</h2>
+        <div class="filters" id="filters"></div>
       </div>
 
-      <div class="projList" id="projList"></div>
+      <div class="grid" id="projectGrid"></div>
     </section>
 
     <hr class="rule" />
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-      <div class="sectionHeadRow">
-        <div>
-          <h2>Skills</h2>
-          <p class="muted">Tools I use to ship reliable analytics.</p>
-        </div>
-
-        <input id="skillSearch" class="search" placeholder="Search: SQL, AWS, Power BI..." />
+      <div class="sectionRow">
+        <h2 class="sectionTitle">SKILLS</h2>
+        <input class="search" id="skillSearch" placeholder="Search: SQL, AWS, Power BI..." />
       </div>
 
       <div class="skillGrid" id="skillGrid"></div>
@@ -144,40 +179,33 @@
 
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
-      <div class="sectionHead">
-        <h2>Experience</h2>
-        <p class="muted">Clean, impact-first bullets. No fluff.</p>
-      </div>
-
-      <div class="exp" id="exp"></div>
+      <h2 class="sectionTitle">EXPERIENCE</h2>
+      <div class="stack" id="expWrap"></div>
     </section>
 
     <hr class="rule" />
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="sectionHead">
-        <h2>Contact</h2>
-        <p class="muted">If you’re hiring for analytics, BI, or data roles, email works best.</p>
-      </div>
+      <h2 class="sectionTitle">CONTACT</h2>
 
       <div class="contact">
         <div>
-          <div class="label">Email</div>
-          <div class="big" id="emailText">yourname@email.com</div>
-          <div class="muted small">Replace with your email in script.js</div>
+          <div class="muted small">Email</div>
+          <div class="big" id="emailText">your@email.com</div>
+          <div class="muted tiny">Update your links in script.js (top section).</div>
         </div>
 
         <div class="contactBtns">
-          <a class="btn primary" id="emailBtn" href="mailto:yourname@email.com">Email me</a>
-          <a class="btn" id="linkedinBtn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" id="githubBtn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn primary" id="emailBtn" href="#">Email</a>
+          <a class="btn" id="linkedinBtn" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" id="githubBtn" href="#" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p class="muted">© <span id="year"></span> Rachana</p>
+      <div class="muted">© <span id="year"></span> Venkata Rachana Yekkirala</div>
     </footer>
   </main>
 
