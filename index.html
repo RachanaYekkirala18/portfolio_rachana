@@ -1,332 +1,188 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Venkata Rachana Yekkirala — Data Engineer / Analyst Portfolio"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rachana | Portfolio</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Rachana — Business Analyst / Data Analyst / Data Engineer portfolio." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Background system -->
-  <div class="bg" aria-hidden="true">
-    <div class="aurora"></div>
-    <div class="mesh"></div>
-    <div class="orbs">
-      <span class="orb o1"></span>
-      <span class="orb o2"></span>
-      <span class="orb o3"></span>
-    </div>
-    <div class="grain"></div>
-  </div>
+  <!-- NAV -->
+  <header class="navWrap">
+    <div class="nav">
+      <a class="brand" href="#top">Rachana</a>
 
-  <!-- Topbar -->
-  <header class="topbar" id="top">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark"></span>
-        <span class="brand-name">Rachana</span>
-        <span class="brand-tag">data systems</span>
-      </a>
+      <button class="navBtn" id="navBtn" aria-label="Open menu">☰</button>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="navlink" href="#about">About</a>
-        <a class="navlink" href="#projects">Projects</a>
-        <a class="navlink" href="#skills">Skills</a>
-        <a class="navlink" href="#experience">Experience</a>
-        <a class="navlink" href="#contact">Contact</a>
+      <nav class="navLinks" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact" class="pill">Contact</a>
       </nav>
-
-      <div class="actions">
-        <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-          <span id="themeIcon">☾</span>
-        </button>
-        <a class="btn primary" id="resumeBtn" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="mobile" id="mobileMenu" aria-hidden="true">
-      <div class="wrap mobile-inner">
-        <a class="mlink" href="#about">About</a>
-        <a class="mlink" href="#projects">Projects</a>
-        <a class="mlink" href="#skills">Skills</a>
-        <a class="mlink" href="#experience">Experience</a>
-        <a class="mlink" href="#contact">Contact</a>
-        <a class="btn primary full" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
-      </div>
+    <div class="navMobile" id="navMobile" aria-label="Mobile menu">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="pill">Contact</a>
     </div>
   </header>
 
-  <main>
+  <main id="top" class="container">
     <!-- HERO -->
-    <section class="wrap hero">
-      <div class="hero-left">
-        <div class="status">
-          <span class="status-dot"></span>
-          <span id="statusText">Open to Data Engineer / Analyst roles</span>
-        </div>
-
-        <h1 class="h1">
-          Calm data systems.
-          <span class="h1-soft">Pipelines, metrics, and dashboards people actually trust.</span>
+    <section class="hero">
+      <div class="heroLeft">
+        <p class="kicker">Hey there,</p>
+        <h1 class="heroTitle">
+          I am <span class="accent">RACHANA</span>.<br />
+          I turn insights into decisions.
         </h1>
 
-        <p class="lead">
-          I’m <b>Venkata Rachana Yekkirala</b>. I build <b>AWS + SQL + Python</b> workflows that make raw data reliable,
-          measurable, and decision-ready.
+        <div class="heroBtns">
+          <!-- Replace with your actual links -->
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="Rachana_Resume.pdf" target="_blank" rel="noreferrer">Get Resume</a>
+        </div>
+
+        <p class="heroSub">
+          Business Analyst / Data Analyst / Data Engineer — SQL • Power BI • Python • AWS
         </p>
-
-        <div class="cta">
-          <a class="btn primary" href="#projects">Explore Projects</a>
-          <button class="btn ghost" id="copyEmailBtn">Copy Email</button>
-        </div>
-
-        <!-- Bento strip -->
-        <div class="bento">
-          <div class="tile wide">
-            <div class="kicker">Core</div>
-            <div class="big">AWS • SQL • Python • BI</div>
-            <div class="small muted">Glue, Lambda, S3, Athena, Redshift • Power BI • Spark</div>
-          </div>
-          <div class="tile">
-            <div class="kicker">Style</div>
-            <div class="big">Quality-first</div>
-            <div class="small muted">validation • clean definitions • repeatable runs</div>
-          </div>
-          <div class="tile">
-            <div class="kicker">Signal</div>
-            <div class="big" id="signalMetric">10M+ rows</div>
-            <div class="small muted">through projects + analytics builds</div>
-          </div>
-        </div>
-
-        <div class="linkrow">
-          <a class="chip" id="lnkEmail" href="#">Email</a>
-          <a class="chip" id="lnkLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="chip" id="lnkGitHub" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" id="lnkTableau" href="#" target="_blank" rel="noopener">Tableau</a>
-        </div>
       </div>
 
-      <div class="hero-right">
-        <!-- Humanoid console -->
-        <div class="panel console">
-          <div class="console-top">
-            <div class="eyes">
-              <span class="eye"></span><span class="eye"></span>
-            </div>
-            <div class="console-title">Signal Console</div>
-            <div class="console-sub">human-friendly outputs</div>
+      <div class="heroRight">
+        <div class="codeCard">
+          <div class="codeTop">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <span class="codeTitle">portfolio.js</span>
           </div>
 
-          <div class="console-body" id="consoleBody">
-            <div class="line"><span class="p">></span> booting…</div>
-            <div class="line"><span class="p">></span> loading modules</div>
-            <div class="line"><span class="p">></span> <span class="ok">ready</span> — choose a mode</div>
-          </div>
-
-          <div class="console-actions">
-            <button class="seg active" data-mode="pipelines">pipelines</button>
-            <button class="seg" data-mode="metrics">metrics</button>
-            <button class="seg" data-mode="dashboards">dashboards</button>
-            <button class="seg" data-mode="streaming">streaming</button>
-          </div>
-        </div>
-
-        <!-- Quick cards -->
-        <div class="panel mini">
-          <div class="mini-grid">
-            <div class="mini-card">
-              <div class="kicker">Focus</div>
-              <div class="big">ETL + KPI Design</div>
-              <div class="small muted">decision-grade metrics</div>
-            </div>
-            <div class="mini-card">
-              <div class="kicker">Strength</div>
-              <div class="big">SQL storytelling</div>
-              <div class="small muted">fast, clean analysis</div>
-            </div>
-          </div>
+          <pre class="codeBlock"><code id="codeText"></code></pre>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="wrap section" id="about">
-      <div class="section-head">
-        <h2>About</h2>
-        <p class="muted">Short, real, outcome-focused.</p>
-      </div>
+    <section id="about" class="section">
+      <h2 class="sectionTitle">ABOUT ME</h2>
 
-      <div class="about-grid">
-        <div class="panel about-main">
-          <h3 class="h3">What I do</h3>
+      <div class="split">
+        <div class="card">
+          <h3 class="cardTitle">Who am I?</h3>
           <p class="muted">
-            I build data workflows end-to-end: ingestion → transformation → validation → curated datasets → BI.
-            I care about <b>clear metric definitions</b>, <b>repeatable pipelines</b>, and <b>reliable dashboards</b>.
+            I’m Rachana — a Master’s in Data Science graduate (UMBC, May 2024). I work with stakeholders to define
+            KPIs, build decision-ready dashboards, and deliver analysis that leaders can act on.
           </p>
-
-          <div class="divider"></div>
-
-          <div class="about-pills" id="aboutPills"></div>
+          <p class="muted">
+            My sweet spot is combining <b>clean metrics</b> + <b>clear storytelling</b> with strong hands-on skills in
+            SQL, Power BI, Python, and AWS.
+          </p>
         </div>
 
-        <div class="panel about-side">
-          <div class="quote">
-            <div class="quote-mark">“</div>
-            <div>
-              <div class="big">Data is only useful when it changes a decision.</div>
-              <div class="muted small">I design analytics for action, not just reporting.</div>
-            </div>
+        <div class="card">
+          <h3 class="cardTitle">Quick facts</h3>
+          <div class="facts">
+            <div class="fact"><span class="factNum">10M+</span><span class="factLbl">records handled</span></div>
+            <div class="fact"><span class="factNum">8–12</span><span class="factLbl">dashboards built</span></div>
+            <div class="fact"><span class="factNum">30–45%</span><span class="factLbl">effort reduced</span></div>
+            <div class="fact"><span class="factNum">AWS</span><span class="factLbl">S3 • Glue • Lambda</span></div>
           </div>
 
-          <div class="divider"></div>
-
-          <div class="facts" id="facts"></div>
+          <div class="miniLinks">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:yourname@email.com">Email</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="sectionTitle">EXPERIENCE</h2>
+
+      <div class="stack" id="expWrap">
+        <!-- JS renders these -->
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="wrap section" id="projects">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p class="muted">A curated deck. Click a card for details.</p>
-      </div>
-
-      <div class="project-bar panel">
+    <section id="projects" class="section">
+      <div class="sectionRow">
+        <h2 class="sectionTitle">PROJECTS</h2>
         <div class="filters" id="filters"></div>
-        <div class="search">
-          <input id="searchInput" type="text" placeholder="Search: kafka, glue, power bi…" autocomplete="off"/>
-          <button class="iconbtn" id="clearSearch" aria-label="Clear search">✕</button>
-        </div>
       </div>
 
-      <div class="project-grid" id="projectGrid"></div>
+      <div class="grid" id="projectGrid"></div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="wrap section" id="skills">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p class="muted">A constellation, not a boring list.</p>
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section">
+      <h2 class="sectionTitle">TESTIMONIALS</h2>
+
+      <div class="grid2" id="testWrap">
+        <!-- JS renders these -->
       </div>
-
-      <div class="skills-grid" id="skillsGrid"></div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="wrap section" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <p class="muted">Timeline with clean, readable bullets.</p>
-      </div>
-
-      <div class="timeline" id="timeline"></div>
     </section>
 
     <!-- CONTACT -->
-    <section class="wrap section" id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p class="muted">If you’re hiring, I respond fast.</p>
-      </div>
+    <section id="contact" class="section">
+      <h2 class="sectionTitle">CONTACT</h2>
 
-      <div class="contact-grid">
-        <div class="panel contact">
-          <h3 class="h3">Let’s talk</h3>
-          <p class="muted">
-            Email is best. I can also share a role-tailored resume and walk you through projects quickly.
-          </p>
+      <div class="contactWrap">
+        <div class="card">
+          <h3 class="cardTitle">Contact me</h3>
+          <p class="muted">If you have any questions, feel free to reach out.</p>
 
-          <div class="contact-actions">
-            <a class="btn primary" id="emailBtn" href="#">Email me</a>
-            <button class="btn ghost" id="copyEmailBtn2">Copy Email</button>
-          </div>
+          <form class="form" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
 
-          <div class="toast" id="toast" aria-live="polite"></div>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your@email.com" required />
+            </label>
 
-          <div class="divider"></div>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Write your message..." required></textarea>
+            </label>
 
-          <div class="linkrow">
-            <a class="chip" id="cLinkedIn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="chip" id="cGitHub" href="#" target="_blank" rel="noopener">GitHub</a>
-            <a class="chip" id="cMedium" href="#" target="_blank" rel="noopener">Medium</a>
-          </div>
-        </div>
-
-        <div class="panel note">
-          <h3 class="h3">Quick message</h3>
-          <p class="muted small">This generates an email draft you can copy.</p>
-
-          <form id="noteForm" class="form">
-            <label class="label">Your name</label>
-            <input class="input" id="nameInput" placeholder="Name" required>
-
-            <label class="label">Message</label>
-            <textarea class="input area" id="msgInput" placeholder="What role are you hiring for?" required></textarea>
-
-            <button class="btn primary full" type="submit">Generate draft</button>
-            <div class="draft" id="draft"></div>
+            <button class="btn primary" type="submit">Send Message</button>
+            <p class="tiny muted" id="formNote"></p>
           </form>
         </div>
-      </div>
 
-      <footer class="footer">
-        <span class="muted small">© <span id="year"></span> Rachana • Built for GitHub Pages</span>
-        <a class="muted small" href="#top">Back to top ↑</a>
-      </footer>
+        <div class="card">
+          <h3 class="cardTitle">Details</h3>
+          <div class="detail">
+            <div class="muted">Email</div>
+            <div class="big">yourname@email.com</div>
+          </div>
+          <div class="detail">
+            <div class="muted">Location</div>
+            <div class="big">USA (Open to relocation)</div>
+          </div>
+
+          <div class="miniLinks">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <footer class="footer">
+      <div class="muted">© <span id="year"></span> Rachana</div>
+    </footer>
   </main>
-
-  <!-- Modal -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
-    <div class="modal-bg" id="modalBg"></div>
-    <div class="modal-card panel" role="document">
-      <div class="modal-head">
-        <div>
-          <div class="kicker" id="mType">Project</div>
-          <div class="mTitle" id="mTitle">Title</div>
-          <div class="muted small" id="mSub">Stack • Outcome</div>
-        </div>
-        <button class="iconbtn" id="mClose" aria-label="Close">✕</button>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="modal-body">
-        <div>
-          <div class="kicker">What it is</div>
-          <p class="muted" id="mDesc"></p>
-        </div>
-
-        <div>
-          <div class="kicker">Highlights</div>
-          <ul class="list" id="mBullets"></ul>
-        </div>
-
-        <div>
-          <div class="kicker">Tech</div>
-          <div class="pillrow" id="mTech"></div>
-        </div>
-
-        <div class="modal-actions">
-          <a class="btn primary" id="mLink" href="#" target="_blank" rel="noopener">View Repo</a>
-          <button class="btn ghost" id="copyProjectBtn">Copy summary</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
