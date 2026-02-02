@@ -1,7 +1,7 @@
-// Put your REAL links here
+// links here
 const LINKS = {
-  linkedin: "https://www.linkedin.com/in/YOUR-LINK",
-  github: "https://github.com/YOUR-USERNAME"
+  linkedin: "https://www.linkedin.com/in/venkata-rachana-213748350/",
+  github: "https://github.com/RachanaYekkirala18"
 };
 
 const lnk1 = document.getElementById("lnk1");
